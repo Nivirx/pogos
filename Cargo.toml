@@ -1,0 +1,23 @@
+[package]
+name = "pog_os"
+version = "0.0.1"
+authors = ["Bradley Claus bradley.claus@chtm.me"]
+edition = "2018"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+raw-cpuid = "6.1.0"
+volatile = "0.2.7"
+spin = "0.5.2"
+bit_field = "0.10.1"
+multiboot2 ="0.7.1"
+bitflags = "1.2.1"
+
+[dependencies.lazy_static]
+version = "1.4.0"
+features = ["spin_no_std"]
+
+[term]
+verbose = true
